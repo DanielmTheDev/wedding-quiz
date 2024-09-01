@@ -1,35 +1,5 @@
 <mat-horizontal-stepper>
-  <mat-step>
-    <mat-card>
-      <mat-card-title>Quiz Title</mat-card-title>
-      <mat-card-content>
-        Question 1
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button matStepperNext>Next</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-step>
-  <mat-step>
-    <mat-card>
-      <mat-card-title>Another Question</mat-card-title>
-      <mat-card-content>
-        Question 2
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-button matStepperNext>Next</button>
-      </mat-card-actions>
-    </mat-card>
-  </mat-step>
-  <mat-step>
-    <mat-card>
-      <mat-card-title>Final Question</mat-card-title>
-      <mat-card-content>
-        Question 2
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="primary">Finish Quiz</button>
-      </mat-card-actions>
-    </mat-card>
+  <mat-step *ngFor="let step of steps">
+    <app-quiz-card [step]="step"></app-quiz-card>
   </mat-step>
 </mat-horizontal-stepper>

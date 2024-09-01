@@ -1,0 +1,14 @@
+<mat-card>
+  <mat-card-title>{{step.title}}</mat-card-title>
+  <mat-card-content>
+    <p>{{step.question}}</p>
+    <ul class="answers">
+      <li *ngFor="let answer of step.answers">
+        <mat-checkbox>{{answer.text}}</mat-checkbox>
+      </li>
+    </ul>
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button matStepperNext>Next</button>
+  </mat-card-actions>
+</mat-card>

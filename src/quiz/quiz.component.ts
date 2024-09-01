@@ -1,13 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
-import { MatStep, MatStepper, MatStepperNext, MatStepperPrevious } from "@angular/material/stepper";
+import { MatStepperModule } from "@angular/material/stepper";
 import { StepContent } from "./step-content";
+import { CommonModule } from "@angular/common";
+import { MatCheckboxModule } from "@angular/material/checkbox";
+import { QuizCardComponent } from "../quiz-card/quiz-card.component";
 
 @Component({
   selector: 'app-quiz',
   standalone: true,
-  imports: [MatCardModule, MatButtonModule, MatStep, MatStepper, MatStepperNext, MatStepperPrevious],
+  imports: [MatCardModule, MatButtonModule, MatStepperModule, CommonModule, MatCheckboxModule, QuizCardComponent],
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.scss'
 })
