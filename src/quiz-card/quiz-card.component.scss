@@ -19,3 +19,8 @@
   align-items: center;
   justify-content: center;
 }
+
+.mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
+  background-color: transparent !important;
+  box-shadow: none !important;
+}

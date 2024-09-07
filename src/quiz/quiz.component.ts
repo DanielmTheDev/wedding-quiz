@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatCardModule } from "@angular/material/card";
 import { MatButtonModule } from "@angular/material/button";
-import { MatStepperModule } from "@angular/material/stepper";
+import { MatStepper, MatStepperModule } from "@angular/material/stepper";
 import { StepContent } from "./step-content";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { MatCheckboxModule } from "@angular/material/checkbox";
@@ -15,10 +15,21 @@ import { QuizCardComponent } from "../quiz-card/quiz-card.component";
   styleUrl: './quiz.component.scss'
 })
 export class QuizComponent implements OnInit {
-  protected steps: StepContent[] = this.getSteps()
+  @ViewChild('stepper')
+  stepper!: MatStepper;
 
+  protected steps: StepContent[] = this.getSteps()
   ngOnInit(): void {
     this.steps = this.getSteps();
+  }
+
+  completeCurrentStep(): void {
+    console.log(this.stepper.selected)
+    if (!this.stepper.selected) {
+      return;
+    }
+    this.stepper.selected.completed = true;
+    this.stepper.next();
   }
 
   private getSteps(): StepContent[] {

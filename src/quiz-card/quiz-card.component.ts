@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { Answer, StepContent } from "../quiz/step-content";
 import { MatCardModule } from "@angular/material/card";
 import { CommonModule } from "@angular/common";
@@ -18,6 +18,7 @@ import { MatDividerModule } from "@angular/material/divider";
 export class QuizCardComponent {
   @Input({ required: true })
   step!: StepContent;
+  @Output() completeStep = new EventEmitter();
 
   protected selectedAnswer?: Answer
 }
