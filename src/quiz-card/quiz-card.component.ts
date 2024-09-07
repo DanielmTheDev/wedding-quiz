@@ -6,11 +6,12 @@ import { MatButtonModule } from "@angular/material/button";
 import { MatStepperModule } from "@angular/material/stepper";
 import { MatRadioModule } from "@angular/material/radio";
 import { FormsModule } from "@angular/forms";
+import { MatDividerModule } from "@angular/material/divider";
 
 @Component({
   selector: 'app-quiz-card',
   standalone: true,
-  imports: [MatCardModule, MatRadioModule, CommonModule, MatButtonModule, MatStepperModule, FormsModule],
+  imports: [MatCardModule, MatRadioModule, CommonModule, MatButtonModule, MatStepperModule, FormsModule, MatDividerModule],
   templateUrl: './quiz-card.component.html',
   styleUrl: './quiz-card.component.scss'
 })
