@@ -14,7 +14,7 @@
   flex-direction: column;
 }
 
-.title-container {
+.centering-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,4 +23,8 @@
 .mat-step-header:hover:not([aria-disabled]), .mat-step-header:hover[aria-disabled=false] {
   background-color: transparent !important;
   box-shadow: none !important;
+}
+
+.image {
+  max-width: 80%;
 }

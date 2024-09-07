@@ -1,4 +1,3 @@
-<img src="assets/dummy.png" alt="Malerweg" class="image"/>
 <mat-horizontal-stepper #stepper [linear]="true" [disableRipple]="true">
   <mat-step *ngFor="let step of steps" [completed]="false">
     <app-quiz-card (completeStep)="completeCurrentStep()" [step]="step"></app-quiz-card>
