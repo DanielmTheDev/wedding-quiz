@@ -2,13 +2,16 @@
   <mat-card-title>{{step.title}}</mat-card-title>
   <mat-card-content>
     <p>{{step.question}}</p>
-    <ul class="answers">
-      <li *ngFor="let answer of step.answers">
-        <mat-checkbox>{{answer.text}}</mat-checkbox>
-      </li>
-    </ul>
+    <mat-radio-group [(ngModel)]="selectedAnswer">
+      <div class="radio-button-list">
+        <mat-radio-button *ngFor="let answer of step.answers" [value]="answer">
+          {{ answer.text }}
+        </mat-radio-button>
+      </div>
+    </mat-radio-group>
   </mat-card-content>
-  <mat-card-actions>
-    <button mat-button matStepperNext>Next</button>
+  <mat-card-actions class="button-container">
+    <button mat-button matStepperPrevious>Zurück</button>
+    <button mat-button matStepperNext [disabled]="!selectedAnswer?.isCorrect">Nächste</button>
   </mat-card-actions>
 </mat-card>

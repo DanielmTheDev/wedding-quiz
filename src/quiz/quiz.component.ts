@@ -42,6 +42,36 @@ export class QuizComponent implements OnInit {
           { text: 'Answer 3', isCorrect: false },
           { text: 'Answer 4', isCorrect: false }
         ]
+      },
+      {
+        title: 'Another Question',
+        question: 'Question 3',
+        answers: [
+          { text: 'Answer 1', isCorrect: false },
+          { text: 'Answer 2', isCorrect: true },
+          { text: 'Answer 3', isCorrect: false },
+          { text: 'Answer 4', isCorrect: false }
+        ]
+      },
+      {
+        title: 'Another Question',
+        question: 'Question 3',
+        answers: [
+          { text: 'Answer 1', isCorrect: false },
+          { text: 'Answer 2', isCorrect: true },
+          { text: 'Answer 3', isCorrect: false },
+          { text: 'Answer 4', isCorrect: false }
+        ]
+      },
+      {
+        title: 'Another Question',
+        question: 'Question 3',
+        answers: [
+          { text: 'Answer 1', isCorrect: false },
+          { text: 'Answer 2', isCorrect: true },
+          { text: 'Answer 3', isCorrect: false },
+          { text: 'Answer 4', isCorrect: false }
+        ]
       }
     ];
   }
