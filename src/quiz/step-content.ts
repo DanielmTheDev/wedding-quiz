@@ -3,6 +3,7 @@ export interface StepContent {
   title: string;
   question: string;
   answers: Answer[];
+  isFinalAnswer: boolean;
 }
 
 export interface Answer {

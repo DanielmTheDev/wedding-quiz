@@ -38,17 +38,19 @@ export class QuizComponent implements OnInit {
         title: 'Quiz Title',
         imagePath: 'assets/dummy.png',
         question: 'Question 1',
+        isFinalAnswer: false,
         answers: [
           { text: 'Answer 1', isCorrect: true },
           { text: 'Answer 2', isCorrect: false },
           { text: 'Answer 3', isCorrect: false },
-          { text: 'Answer 4', isCorrect: false }
+          { text: 'Answer 4', isCorrect: false },
         ]
       },
       {
         title: 'Another Question',
         imagePath: 'assets/dummy2.png',
         question: 'Question 2',
+        isFinalAnswer: false,
         answers: [
           { text: 'Answer 1', isCorrect: false },
           { text: 'Answer 2', isCorrect: true },
@@ -59,6 +61,7 @@ export class QuizComponent implements OnInit {
       {
         title: 'Another Question',
         imagePath: 'assets/dummy.png',
+        isFinalAnswer: false,
         question: 'Question 3',
         answers: [
           { text: 'Answer 1', isCorrect: false },
@@ -70,6 +73,7 @@ export class QuizComponent implements OnInit {
       {
         title: 'Another Question',
         imagePath: 'assets/dummy2.png',
+        isFinalAnswer: false,
         question: 'Question 3',
         answers: [
           { text: 'Answer 1', isCorrect: false },
@@ -81,6 +85,7 @@ export class QuizComponent implements OnInit {
       {
         title: 'Another Question',
         imagePath: 'assets/dummy.png',
+        isFinalAnswer: true,
         question: 'Question 3',
         answers: [
           { text: 'Answer 1', isCorrect: false },

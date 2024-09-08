@@ -18,6 +18,6 @@
   </mat-card-content>
   <mat-card-actions class="button-container">
     <button mat-button matStepperPrevious>Zurück</button>
-    <button mat-button (click)="completeStep.emit()" [disabled]="!selectedAnswer?.isCorrect">Nächste</button>
+    <button mat-button (click)="finishStep()" [disabled]="!selectedAnswer?.isCorrect">Nächste</button>
   </mat-card-actions>
 </mat-card>
