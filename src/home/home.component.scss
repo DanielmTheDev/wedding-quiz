@@ -1,0 +1,21 @@
+.centering-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.centering-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  width: 80%;
+}
+
+.explain-text {
+  text-align: center;
+  margin-top: 5vh;
+}
