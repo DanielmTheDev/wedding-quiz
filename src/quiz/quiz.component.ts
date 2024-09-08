@@ -69,7 +69,7 @@ export class QuizComponent implements OnInit {
       },
       {
         title: 'Another Question',
-        imagePath: 'assets/dumm2.png',
+        imagePath: 'assets/dummy2.png',
         question: 'Question 3',
         answers: [
           { text: 'Answer 1', isCorrect: false },
