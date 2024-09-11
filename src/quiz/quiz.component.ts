@@ -98,8 +98,8 @@ export class QuizComponent implements OnInit {
         question: 'Mit wem macht Urlaub am meisten Spaß?',
         answers: [
           { text: 'Dieter & Marion', isCorrect: false },
-          { text: 'Kalle & Karola', isCorrect: true },
-          { text: 'Jule & Dani', isCorrect: false },
+          { text: 'Kalle & Karola', isCorrect: false },
+          { text: 'Jule & Dani', isCorrect: true },
         ]
       }
     ];
