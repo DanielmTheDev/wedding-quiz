@@ -3,11 +3,11 @@
     <img src="{{ step.imagePath }}" alt="Malerweg" class="image"/>
   </div>
   <div class="centering-container">
-    <mat-card-title class="top-space">{{ step.title }}</mat-card-title>
+    <mat-card-title class="question-text">{{ step.title }}</mat-card-title>
   </div>
   <mat-divider></mat-divider>
   <mat-card-content>
-    <p class="top-space">{{ step.question }}</p>
+    <p class="question-text">{{ step.question }}</p>
     <mat-radio-group [(ngModel)]="selectedAnswer">
       <div class="radio-button-list">
         <mat-radio-button *ngFor="let answer of step.answers" [value]="answer">

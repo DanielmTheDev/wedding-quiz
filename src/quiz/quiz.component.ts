@@ -35,63 +35,71 @@ export class QuizComponent implements OnInit {
   private getSteps(): StepContent[] {
     return [
       {
-        title: 'Quiz Title',
-        imagePath: 'assets/dummy.png',
-        question: 'Question 1',
+        title: 'Karneval',
+        imagePath: 'assets/fastnacht.png',
+        question: 'Wie alt ist die Bevergerner Fastnacht?',
         isFinalAnswer: false,
         answers: [
-          { text: 'Answer 1', isCorrect: true },
-          { text: 'Answer 2', isCorrect: false },
-          { text: 'Answer 3', isCorrect: false },
-          { text: 'Answer 4', isCorrect: false },
+          { text: '125 Jahre', isCorrect: false },
+          { text: '225 Jahre', isCorrect: false },
+          { text: '325 Jahre', isCorrect: false },
+          { text: '425 Jahre', isCorrect: true },
         ]
       },
       {
-        title: 'Another Question',
-        imagePath: 'assets/dummy2.png',
-        question: 'Question 2',
+        title: 'Helgoland',
+        imagePath: 'assets/helgoland.png',
+        question: 'Wie hieß das Hotel, in dem wir untergebracht waren, als ihr euch verlobt habt?',
         isFinalAnswer: false,
         answers: [
-          { text: 'Answer 1', isCorrect: false },
-          { text: 'Answer 2', isCorrect: true },
-          { text: 'Answer 3', isCorrect: false },
-          { text: 'Answer 4', isCorrect: false }
+          { text: 'Haus am Falm', isCorrect: false },
+          { text: 'Haus Quickborn', isCorrect: false },
+          { text: 'Haus Marinas', isCorrect: true },
+          { text: 'Haus Waltraut', isCorrect: false }
         ]
       },
       {
-        title: 'Another Question',
-        imagePath: 'assets/dummy.png',
+        title: 'Helgoland',
+        imagePath: 'assets/flagge.png',
         isFinalAnswer: false,
-        question: 'Question 3',
+        question: 'Grün ist das Land, rot ist die ...?, weiß ist der Strand – das sind die Farben von Helgoland!',
         answers: [
-          { text: 'Answer 1', isCorrect: false },
-          { text: 'Answer 2', isCorrect: true },
-          { text: 'Answer 3', isCorrect: false },
-          { text: 'Answer 4', isCorrect: false }
+          { text: 'Wand', isCorrect: false },
+          { text: 'Kant', isCorrect: true },
+          { text: 'Handstand', isCorrect: false }
         ]
       },
       {
-        title: 'Another Question',
-        imagePath: 'assets/dummy2.png',
+        title: 'Bayern',
+        imagePath: 'assets/bayer.png',
         isFinalAnswer: false,
-        question: 'Question 3',
+        question: 'Was ist die beliebteste Urlaubsaktivität in Süddeutschland?',
         answers: [
-          { text: 'Answer 1', isCorrect: false },
-          { text: 'Answer 2', isCorrect: true },
-          { text: 'Answer 3', isCorrect: false },
-          { text: 'Answer 4', isCorrect: false }
+          { text: 'Bier trinken', isCorrect: false },
+          { text: 'Schuhplattlern', isCorrect: false },
+          { text: 'Wandern', isCorrect: true }
         ]
       },
       {
-        title: 'Another Question',
-        imagePath: 'assets/dummy.png',
+        title: 'Wandern',
+        imagePath: 'assets/sächsische_schweiz.png',
+        isFinalAnswer: false,
+        question: 'Wo befindet sich der einzige Felsennationalpark Deutschlands?',
+        answers: [
+          { text: 'Bayern', isCorrect: false },
+          { text: 'Sachsen', isCorrect: true },
+          { text: 'Baden-Württemberg', isCorrect: false },
+        ]
+      },
+      {
+        title: 'Urlaub',
+        imagePath: 'assets/juledani.png',
         isFinalAnswer: true,
-        question: 'Question 3',
+        question: 'Mit wem macht Urlaub am meisten Spaß?',
         answers: [
-          { text: 'Answer 1', isCorrect: false },
-          { text: 'Answer 2', isCorrect: true },
-          { text: 'Answer 3', isCorrect: false },
-          { text: 'Answer 4', isCorrect: false }
+          { text: 'Dieter & Marion', isCorrect: false },
+          { text: 'Kalle & Karola', isCorrect: true },
+          { text: 'Jule & Dani', isCorrect: false },
         ]
       }
     ];
