@@ -14,17 +14,13 @@ import { QuizCardComponent } from "../quiz-card/quiz-card.component";
   templateUrl: './quiz.component.html',
   styleUrl: './quiz.component.scss'
 })
-export class QuizComponent implements OnInit {
+export class QuizComponent {
   @ViewChild('stepper')
   stepper!: MatStepper;
 
   protected steps: StepContent[] = this.getSteps()
-  ngOnInit(): void {
-    this.steps = this.getSteps();
-  }
 
   completeCurrentStep(): void {
-    console.log(this.stepper.selected)
     if (!this.stepper.selected) {
       return;
     }
@@ -35,71 +31,87 @@ export class QuizComponent implements OnInit {
   private getSteps(): StepContent[] {
     return [
       {
-        title: 'Karneval',
-        imagePath: 'assets/fastnacht.png',
-        question: 'Wie alt ist die Bevergerner Fastnacht?',
+        title: 'Reisen',
+        imagePath: 'assets/reisen_flugzeug_ruhigster_platz.jpeg',
+        question: 'Welcher Sitzplatz im Flugzeug ist meist am ruhigsten?',
         isFinalAnswer: false,
         answers: [
-          { text: '125 Jahre', isCorrect: false },
-          { text: '225 Jahre', isCorrect: false },
-          { text: '325 Jahre', isCorrect: false },
-          { text: '425 Jahre', isCorrect: true },
+          { text: 'Ganz hinten', isCorrect: false },
+          { text: 'Direkt neben der Tür', isCorrect: false },
+          { text: 'Über den Tragflächen', isCorrect: true },
+          { text: 'Vorne beim Cockpit', isCorrect: false }
         ]
       },
       {
-        title: 'Helgoland',
-        imagePath: 'assets/helgoland.png',
-        question: 'Wie hieß das Hotel, in dem wir untergebracht waren, als ihr euch verlobt habt?',
+        title: 'Zuhause',
+        imagePath: 'assets/zuhause_ibbenbueren_bergbau.jpeg',
+        question: 'Wofür war Ibbenbüren bis 2018 besonders bekannt?',
         isFinalAnswer: false,
         answers: [
-          { text: 'Haus am Falm', isCorrect: false },
-          { text: 'Haus Quickborn', isCorrect: false },
-          { text: 'Haus Marinas', isCorrect: true },
-          { text: 'Haus Waltraut', isCorrect: false }
+          { text: 'Herstellung von Gartenzwergen', isCorrect: false },
+          { text: 'Steinkohlebergbau', isCorrect: true },
+          { text: 'Flughafen „Ibbi-Air“', isCorrect: false },
+          { text: 'Größte Gummibärchen-Fabrik Deutschlands', isCorrect: false }
         ]
       },
       {
-        title: 'Helgoland',
-        imagePath: 'assets/flagge.png',
+        title: 'Heiratsantrag in Amsterdam',
+        imagePath: 'assets/amsterdam_grachten_venedig_des_nordens.jpeg',
+        question: 'Amsterdam wird auch „Venedig des Nordens“ genannt – warum?',
         isFinalAnswer: false,
-        question: 'Grün ist das Land, rot ist die ...?, weiß ist der Strand – das sind die Farben von Helgoland!',
         answers: [
-          { text: 'Wand', isCorrect: false },
-          { text: 'Kant', isCorrect: true },
-          { text: 'Handstand', isCorrect: false }
+          { text: 'Wegen der vielen Fahrräder', isCorrect: false },
+          { text: 'Wegen der zahlreichen Grachten', isCorrect: true },
+          { text: 'Wegen der bunten Tulpenfelder', isCorrect: false },
+          { text: 'Wegen der Windmühlen', isCorrect: false }
         ]
       },
       {
-        title: 'Bayern',
-        imagePath: 'assets/bayer.png',
+        title: 'Euer Baby',
+        imagePath: 'assets/ridgeback_temperament.jpeg',
+        question: 'Das Temperament des Ridgebacks lässt sich wie folgt beschreiben:',
         isFinalAnswer: false,
-        question: 'Was ist die beliebteste Urlaubsaktivität in Süddeutschland?',
         answers: [
-          { text: 'Bier trinken', isCorrect: false },
-          { text: 'Schuhplattlern', isCorrect: false },
-          { text: 'Wandern', isCorrect: true }
+          { text: 'sensibel, ruhig, aufmerksam, anhänglich, willensstark', isCorrect: true },
+          { text: 'laut, verspielt, unbekümmert', isCorrect: false },
+          { text: 'sanft, aufmerksam, neugierig', isCorrect: false },
+          { text: 'albern, freundlich, zerstreut', isCorrect: false }
         ]
       },
       {
-        title: 'Wandern',
-        imagePath: 'assets/sächsische_schweiz.png',
+        title: 'Freundschaft',
+        imagePath: 'assets/freundschaft_drei_engel_frichael.jpeg',
+        question: 'Was beschreibt eure Lieblingsmenschen Moritz, Robin und Pia am besten?',
         isFinalAnswer: false,
-        question: 'Wo befindet sich der einzige Felsennationalpark Deutschlands?',
         answers: [
-          { text: 'Bayern', isCorrect: false },
-          { text: 'Sachsen', isCorrect: true },
-          { text: 'Baden-Württemberg', isCorrect: false },
+          { text: 'Die dreisten Drei', isCorrect: false },
+          { text: 'Die drei Fragezeichen', isCorrect: false },
+          { text: 'Dreikäsehoch', isCorrect: false },
+          { text: 'Drei Engel für Frichael', isCorrect: true }
         ]
       },
       {
-        title: 'Urlaub',
-        imagePath: 'assets/juledani.png',
+        title: 'Drei Engel für Frichael',
+        imagePath: 'assets/drei_engel_frichael_vorlieben.jpeg',
+        question: 'Was mögen wir am liebsten:',
+        isFinalAnswer: false,
+        answers: [
+          { text: 'Gemeinsames Feierabend-Bier', isCorrect: true },
+          { text: 'Fußmassagen', isCorrect: false },
+          { text: 'Hobby-Horsing', isCorrect: false },
+          { text: 'Briefmarken sammeln', isCorrect: false }
+        ]
+      },
+      {
+        title: 'Gemeinsames Feierabend-Bier',
+        imagePath: 'assets/feierabend_bier_terrasse.jpeg',
+        question: 'Was bekommt ihr für ein kühles Bier bei euch auf der Terrasse?',
         isFinalAnswer: true,
-        question: 'Mit wem macht Urlaub am meisten Spaß?',
         answers: [
-          { text: 'Dieter & Marion', isCorrect: false },
-          { text: 'Kalle & Karola', isCorrect: false },
-          { text: 'Jule & Dani', isCorrect: true },
+          { text: 'Ein Küsschen aufs Nüsschen', isCorrect: false },
+          { text: 'Den Schlüssel für eure Schatzkiste', isCorrect: false },
+          { text: 'Einen netten Abend mit den Besten', isCorrect: false },
+          { text: 'Alle Antworten sind richtig', isCorrect: true }
         ]
       }
     ];
