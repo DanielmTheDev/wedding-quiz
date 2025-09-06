@@ -4,4 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Deployment
 
-Just push main and the github action will take care of the rest, deploying to this: https://danielmthedev.github.io/wedding-quiz/
+```bash
+npm ci
+npx ng build --configuration production --base-href /wedding-quiz/
+npx angular-cli-ghpages --dir dist/wedding-app/browser
+```
